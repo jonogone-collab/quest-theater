@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/34817592/README.md)
+[README.md](https://github.com/user-attachments/files/34819621/README.md)
 # Quest Theater for Plex
 
 A single-file WebXR player for your own Plex server. It runs in the Meta Quest Browser — no sideloading, no developer mode.
@@ -34,14 +34,15 @@ The page is only the player. Your Plex sign-in is kept in the headset's browser 
 | Resize the screen | Point at the screen, grab a corner handle, pull out or in. Grows/shrinks from the centre; the size shows as a TV-style diagonal |
 | Scrub | Drag along the progress bar; the time shows above it |
 | Browse the library | Thumbstick up/down scrolls the grid (it speeds up the longer you hold). With hands or a mouse, drag the grid. Drag or tap the A–Z slider on the left to jump |
-| Curve the screen | Tap the curve button: a slider pops up. Slide up from Flat to wrap-around (up to a 150° arc). The screen keeps its width as it bends. Default is flat |
-| Dim the room | Tap the room button: slide from full passthrough (bottom) to pure black (top). B or Y steps through passthrough → dimmed → black |
+| Curve the screen | Tap the curve button: a slider pops up (Curved at the top, Flat at the bottom; the arc in degrees shows beside the knob). Drag it, or point at it and nudge the thumbstick up/down for 1° steps. Default is flat |
+| Dim the room | Tap the room button: Passthrough at the top, Black at the bottom; the % beside the knob is how much of your room shows. Drag it, or point at it and nudge the thumbstick for 1% steps. B or Y steps through passthrough → dimmed → black |
+| Backlight | Backlight button (next to Quality): switch it on, pick **Color** (colour wheel or quick swatches) or **Match screen** (the picture's own colours, blurred outward), then set **Intensity** and **Spread** (Tight → Wide). **Glow: Light (add)** adds the colour on top of passthrough like real light; if the glow ever disappears in passthrough, switch to **Solid**. Match screen turns the sharp video mode off |
 | Bluetooth headphones out of sync | Quality → **Audio delay**: drag the slider or use − / + (10 ms steps) until lips match. The picture is held back to match your headphones; the setting is remembered. Most Bluetooth headphones need roughly 150–300 ms |
 | Show / hide controls | Tap the screen. While playing they fade after 4 s without a pointer on them |
 | Play / pause | A or X |
 | Room dimming steps | B or Y |
 
-Until you move the control panel yourself, it stays tucked under the screen when you move or resize the screen. Screen size, position, curve, panel placement, room, volume and quality are remembered.
+Until you move the control panel yourself, it stays tucked under the screen when you move or resize the screen. Screen size, position, curve, backlight, panel placement, room, volume, audio delay and quality are remembered.
 
 ## Picture quality
 

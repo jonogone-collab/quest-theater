@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/34814477/README.md)
+[README.md](https://github.com/user-attachments/files/34817592/README.md)
 # Quest Theater for Plex
 
 A single-file WebXR player for your own Plex server. It runs in the Meta Quest Browser — no sideloading, no developer mode.
@@ -23,7 +23,7 @@ The page is only the player. Your Plex sign-in is kept in the headset's browser 
 
 ## Controls
 
-**Control panel:** library · volume (tap the speaker to mute, drag the slider) · −10s / play-pause / +30s · quality dropdown · room (passthrough → dimmed → black) · exit.
+**Control panel:** library · volume (tap the speaker to mute, drag the slider) · −10s / play-pause / +30s · quality dropdown (also holds Audio delay) · curve · room · exit.
 
 | Action | How |
 |---|---|
@@ -34,16 +34,18 @@ The page is only the player. Your Plex sign-in is kept in the headset's browser 
 | Resize the screen | Point at the screen, grab a corner handle, pull out or in. Grows/shrinks from the centre; the size shows as a TV-style diagonal |
 | Scrub | Drag along the progress bar; the time shows above it |
 | Browse the library | Thumbstick up/down scrolls the grid (it speeds up the longer you hold). With hands or a mouse, drag the grid. Drag or tap the A–Z slider on the left to jump |
-| Curve the screen | Curve button (between Quality and Room) → drag the slider from Flat to Wrap-around (up to a 150° arc), or tap Flat / Gentle / Wrap. The screen keeps its width as it bends; pull it closer for a wide-lens feel. Default is flat |
+| Curve the screen | Tap the curve button: a slider pops up. Slide up from Flat to wrap-around (up to a 150° arc). The screen keeps its width as it bends. Default is flat |
+| Dim the room | Tap the room button: slide from full passthrough (bottom) to pure black (top). B or Y steps through passthrough → dimmed → black |
+| Bluetooth headphones out of sync | Quality → **Audio delay**: drag the slider or use − / + (10 ms steps) until lips match. The picture is held back to match your headphones; the setting is remembered. Most Bluetooth headphones need roughly 150–300 ms |
 | Show / hide controls | Tap the screen. While playing they fade after 4 s without a pointer on them |
 | Play / pause | A or X |
-| Room mode | B or Y |
+| Room dimming steps | B or Y |
 
 Until you move the control panel yourself, it stays tucked under the screen when you move or resize the screen. Screen size, position, curve, panel placement, room, volume and quality are remembered.
 
 ## Picture quality
 
-- **Video layer:** in the headset, the video is handed straight to the Quest's compositor (a WebXR media layer) instead of being drawn as a texture in the 3D scene. This avoids a second resampling and is noticeably sharper. If the browser doesn't support it, the app falls back to the texture automatically.
+- **Video layer (flat screen):** in the headset, a flat screen's video is handed straight to the Quest's compositor (a WebXR media layer) instead of being drawn as a texture in the 3D scene. This avoids a second resampling and is noticeably sharper. When the screen is curved, when an audio delay is set, or if the browser doesn't support layers, the video is drawn on the screen in the 3D scene instead — reliable, slightly softer.
 - **Original** asks Plex for the file's native resolution (up to 4K) at about 1.5× its bitrate, and tells Plex the headset can take 4K H.264, so H.264 files stream untouched.
 - The status next to the title tells you what's happening: *Direct play* / *Direct stream · original video* = untouched; *Converting* = your server is re-encoding (HEVC/HDR files always are, since the browser can't take them).
 - **Stuck at a low resolution (e.g. "Converting 270p") whatever you pick?** Open the Quality dropdown: the *What's happening* box shows the connection and the server's own reason.

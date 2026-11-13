@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/34812479/README.md)
+[README.md](https://github.com/user-attachments/files/34813323/README.md)
 # Quest Theater for Plex
 
 A single-file WebXR player for your own Plex server. It runs in the Meta Quest Browser — no sideloading, no developer mode.
@@ -45,6 +45,9 @@ Until you move the control panel yourself, it stays tucked under the screen when
 - **Video layer:** in the headset, the video is handed straight to the Quest's compositor (a WebXR media layer) instead of being drawn as a texture in the 3D scene. This avoids a second resampling and is noticeably sharper. If the browser doesn't support it, the app falls back to the texture automatically.
 - **Original** asks Plex for the file's native resolution (up to 4K) at about 1.5× its bitrate, and tells Plex the headset can take 4K H.264, so H.264 files stream untouched.
 - The status next to the title tells you what's happening: *Direct play* / *Direct stream · original video* = untouched; *Converting* = your server is re-encoding (HEVC/HDR files always are, since the browser can't take them).
+- **Stuck at a low resolution (e.g. "Converting 270p") whatever you pick?** Open the Quality dropdown: the *What's happening* box shows the connection and the server's own reason.
+  - *Connection: Relay* → you're going through Plex's relay (1–2 Mbps max). Fix the local connection (see "Getting a direct connection").
+  - *Connection: Local* but still low → Plex is treating the headset as remote. In Plex → Settings → Network, set **LAN Networks** to your home subnet (e.g. `192.168.1.0/24`) and turn on **Treat WAN IP As LAN Bandwidth**; in Settings → Remote Access set **Limit remote stream bitrate** to *Original (no limit)*.
 - If it says Converting and still looks soft: in Plex → Settings → Transcoder, set *Transcoder quality* to "Make my CPU hurt" and turn on hardware-accelerated video encoding if your server supports it.
 
 ## Playback

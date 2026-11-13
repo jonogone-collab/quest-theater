@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/34813323/README.md)
+[README.md](https://github.com/user-attachments/files/34814477/README.md)
 # Quest Theater for Plex
 
 A single-file WebXR player for your own Plex server. It runs in the Meta Quest Browser — no sideloading, no developer mode.
@@ -34,11 +34,12 @@ The page is only the player. Your Plex sign-in is kept in the headset's browser 
 | Resize the screen | Point at the screen, grab a corner handle, pull out or in. Grows/shrinks from the centre; the size shows as a TV-style diagonal |
 | Scrub | Drag along the progress bar; the time shows above it |
 | Browse the library | Thumbstick up/down scrolls the grid (it speeds up the longer you hold). With hands or a mouse, drag the grid. Drag or tap the A–Z slider on the left to jump |
+| Curve the screen | Curve button (between Quality and Room) → drag the slider from Flat to Wrap-around (up to a 150° arc), or tap Flat / Gentle / Wrap. The screen keeps its width as it bends; pull it closer for a wide-lens feel. Default is flat |
 | Show / hide controls | Tap the screen. While playing they fade after 4 s without a pointer on them |
 | Play / pause | A or X |
 | Room mode | B or Y |
 
-Until you move the control panel yourself, it stays tucked under the screen when you move or resize the screen. Screen size, position, panel placement, room, volume and quality are remembered.
+Until you move the control panel yourself, it stays tucked under the screen when you move or resize the screen. Screen size, position, curve, panel placement, room, volume and quality are remembered.
 
 ## Picture quality
 
